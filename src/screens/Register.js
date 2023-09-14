@@ -1,10 +1,18 @@
-import React from "react";
+import React from 'react'
 
-const Login = () => {
-    return (
-        <div className="flex justify-center items-center h-screen w-screen bg-gradient-to-r from-[#c33764] to-[#3945b1] ">
+export const Register = () => {
+  return (
+    <div className="flex justify-center items-center h-screen w-screen bg-gradient-to-r from-[#c33764] to-[#3945b1] ">
             <div className=" mb-[100px] bg-transparent w-auto h-auto ">
                 <form className="flex flex-col">
+                <div className="flex justify-center items-center mb-5  bg-gradient-to-r from-[#243b55]  to-[#1a263d] rounded-xl">
+                        <i className="fa-regular fa-user text-lg m-2"></i>
+                        <input
+                            className=" bg-transparent px-3 w-[250px] h-11 rounded-lg "
+                            type="text"
+                            placeholder="Huzaifa"
+                        />
+                    </div>
                     <div className="flex justify-center items-center mb-4  bg-gradient-to-r from-[#243b55]  to-[#1a263d] rounded-xl">
                         <i className="fa-regular fa-envelope text-lg m-2"></i>
                         <input
@@ -28,7 +36,5 @@ const Login = () => {
                 </form>
             </div>
         </div>
-    );
-};
-
-export default Login;
+  )
+}
