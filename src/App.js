@@ -1,18 +1,18 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./screens/Login";
-import Navbar from "./screens/Navbar";
+import Navbar from "./components/Navbar";
 import { Register } from "./screens/Register";
 import Dashboard from "./screens/Dashboard";
 import Admin from "./screens/Admin";
 import Cart from "./screens/Cart";
 import Profile from "./screens/Profile";
+import Footer from "./components/Footer";
 
 function App() {
     return (
         <BrowserRouter className="App">
             <Navbar />
-            
             <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/admin" element={<Admin />} />
@@ -29,6 +29,7 @@ function App() {
                     }
                 />
             </Routes>
+            <Footer />
         </BrowserRouter>
     );
 }

@@ -15,7 +15,7 @@ const Dashboard = () => {
         description =
             "Ullamco sit occaecat in commodo veniam qui nisi ullamco commodo nulla. Amet laborum et tempor consequat occaecat commodo consequat sint cillum quis. Fugiat dolor consectetur dolor nulla sint commodo irure commodo sint. Nulla officia ullamco incididunt est occaecat laboris dolore velit veniam proident. Aliqua tempor aute eiusmod ipsum. Nulla aliquip qui elit exercitation nostrud anim. Non fugiat qui dolor aliquip do esse fugiat.";
     return (
-        <div className="flex flex-col justify-center items-center w-screen bg-[#FFFDFA] ">
+        <div className="flex flex-col justify-center items-center w-screen bg-[#F5F5F5] ">
             <div className="h-auto w-full mt-4 px-5">
                 <ImageSlider images={[bg, bg1, bg2, bg3]} />
             </div>
