@@ -30,8 +30,8 @@ export const Register = () => {
                             placeholder="*****"
                         />
                     </div>
-                    <button className=" bg-[#33547a] w-16 h-8 mt-4 self-end rounded-lg text-lg" type="submit">
-                        LogIn
+                    <button className=" bg-[#33547a] w-20 h-8 mt-4 self-end rounded-lg text-lg" type="submit">
+                        Register
                     </button>
                 </form>
             </div>
