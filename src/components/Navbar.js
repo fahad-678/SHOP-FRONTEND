@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 const Navbar = () => {
     return (
         <div className="flex justify-center items-center w-screen px-2 ">
-            <nav className="flex justify-center items-center w-screen bg-[#FBC40E] border rounded-lg shadow-lg ml-3 mt-2 h-20">
+            <nav className="flex justify-center items-center w-full bg-[#FBC40E] border rounded-lg shadow-lg ml-3 mt-2 h-20 overflow-hidden">
                 <div className="flex w-1/2 justify-start items-center ">
                     <div className="flex items-center justify-center h-18 w-16 p-1 ml-1">
                         <img

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 const ImageSlider = ({ images }) => {
-    console.log(images);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextSlide = () => {
