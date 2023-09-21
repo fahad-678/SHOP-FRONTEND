@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import AuthContext from "./context/AuthContext/authContext";
+import AuthContext from "./context/AuthContext/AuthContext";
+import LocalContext from "./context/LocalContext/LocalContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <AuthContext>
-        <App />
+        <LocalContext>
+            <App />
+        </LocalContext>
     </AuthContext>
 );
 

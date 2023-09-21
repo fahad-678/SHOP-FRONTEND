@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { authContext } from "../context/AuthContext/authContext";
+import { authContext } from "../context/AuthContext/AuthContext";
 
 const Login = () => {
     const { loginFormAction } = useContext(authContext);

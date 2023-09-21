@@ -6,7 +6,7 @@ import {
     LOGIN_SUCCESS,
     REGISTER_FAILED,
     REGISTER_SUCCESS,
-} from "./authContextUtils";
+} from "./AuthContextUtils";
 
 export const authContext = createContext();
 
