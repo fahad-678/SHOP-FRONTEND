@@ -4,6 +4,7 @@ import { API_URL } from "../../utils/urlUtil";
 import {
     LOGIN_FAILED,
     LOGIN_SUCCESS,
+    LOGOUT,
     REGISTER_FAILED,
     REGISTER_SUCCESS,
 } from "./AuthContextUtils";
@@ -44,6 +45,14 @@ const authReducer = (state, action) => {
                 loading: false,
                 error: payload,
             };
+        case LOGOUT:
+            localStorage.removeItem("userAuth");
+            return {
+                ...state,
+                userAuth: null,
+                loading: false,
+                error: null,
+            };
         default:
             return state;
     }
@@ -77,7 +86,8 @@ const AuthContext = ({ children }) => {
         }
     };
     const registerFormAction = async (form) => {
-        const boundary = '---------------------------' + Date.now().toString(16);
+        const boundary =
+            "---------------------------" + Date.now().toString(16);
         const config = {
             headers: {
                 "Content-Type": `multipart/form-data; boundary=${boundary}`,
@@ -101,10 +111,23 @@ const AuthContext = ({ children }) => {
             console.log(error);
         }
     };
+    const logoutUserAction = () => {
+        dispatch({
+            type: LOGOUT,
+        });
+        window.location.href = "/";
+    };
 
     return (
         <authContext.Provider
-            value={{ loginFormAction, registerFormAction, error: state.error }}
+            value={{
+                loginFormAction,
+                userImage: state?.userAuth?.userImage,
+                token: state?.userAuth?.token,
+                registerFormAction,
+                logoutUserAction,
+                error: state.error,
+            }}
         >
             {children}
         </authContext.Provider>

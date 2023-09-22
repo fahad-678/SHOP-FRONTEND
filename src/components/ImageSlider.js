@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { API_URL } from "../utils/urlUtil";
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ images, details }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextSlide = () => {
@@ -34,15 +34,32 @@ const ImageSlider = ({ images }) => {
                             <i className="fa-solid fa-chevron-left text-5xl text absolute top-1/2 left-2 transform -translate-y-1/2"></i>
                             <i className="fa-solid fa-chevron-left text-5xl text-white absolute top-1/2 left-4 transform -translate-y-1/2"></i>
                         </button>
-                        <img
-                            src={
-                                API_URL +
-                                "/" +
-                                images[currentIndex]?.imgPath[0]?.path
-                            }
-                            alt={`Slide ${currentIndex}`}
-                            className="bg-cover h-[550px] w-full border rounded-lg shadow-lg"
-                        />
+                        {details ? (
+                            <>
+                                <img
+                                    src={
+                                        API_URL +
+                                        "/" +
+                                        images[currentIndex]?.path
+                                    }
+                                    alt={`Slide ${currentIndex}`}
+                                    className="bg-cover h-96 w-96 border rounded-lg shadow-lg"
+                                />
+                            </>
+                        ) : (
+                            <>
+                                <img
+                                    src={
+                                        API_URL +
+                                        "/" +
+                                        images[currentIndex]?.imgPath[0]?.path
+                                    }
+                                    alt={`Slide ${currentIndex}`}
+                                    className="bg-cover h-[550px] w-full border rounded-lg shadow-lg"
+                                />
+                            </>
+                        )}
+
                         <button
                             className="absolute top-1/2 right-2 transform -translate-y-1/2 hover:-translate-y-1 hover:scale-105 "
                             onClick={nextSlide}
