@@ -28,7 +28,8 @@ const Dashboard = () => {
                             if (index < 8) {
                                 return (
                                     <>
-                                        <Display 
+                                        <Display
+                                            key={a._id}
                                             _id={a._id}
                                             imgPath={a?.imgPath[0]?.path}
                                             title={a?.title}
@@ -49,6 +50,7 @@ const Dashboard = () => {
                                 return (
                                     <>
                                         <Display
+                                            key={a._id}
                                             _id={a._id}
                                             imgPath={a?.imgPath[0]?.path}
                                             title={a?.title}

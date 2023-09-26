@@ -9,6 +9,8 @@ import Cart from "./screens/Cart";
 import Profile from "./screens/Profile";
 import Footer from "./components/Footer";
 import ProductDetails from "./screens/ProductDetails";
+import Product from "./screens/Product";
+import EditProduct from "./screens/EditProduct";
 
 function App() {
     return (
@@ -17,6 +19,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/admin" element={<Admin />} />
+                <Route path="/admin/add-product" element={<Product />} />
+                <Route path="/admin/edit/:prodId" element={<EditProduct />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/login" element={<Login />} />

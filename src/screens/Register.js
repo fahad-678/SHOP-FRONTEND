@@ -3,7 +3,7 @@ import { authContext } from "../context/AuthContext/AuthContext";
 
 export const Register = () => {
     const { registerFormAction } = useContext(authContext);
-    const [form, setform] = useState({
+    const [form, setForm] = useState({
         name: "",
         email: "",
         password: "",
@@ -13,13 +13,13 @@ export const Register = () => {
     });
     const { name, email, password, phNumber, address, image } = form;
     const onInputChange = (e) => {
-        return setform({
+        return setForm({
             ...form,
             [e.target.name]: e.target.value,
         });
     };
     const onImageChange = (e) => {
-        return setform({
+        return setForm({
             ...form,
             image: e.target.files[0],
         });
@@ -37,8 +37,8 @@ export const Register = () => {
         } else {
             return alert("Please fill right info");
         }
-        registerFormAction(formData);
         console.log(formData);
+        registerFormAction(formData);
     };
     return (
         <div className="flex justify-center items-center h-screen w-screen  px-4 py-2">

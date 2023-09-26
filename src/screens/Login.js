@@ -16,7 +16,7 @@ const Login = () => {
     };
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        loginFormAction(form)
+        loginFormAction(form);
         console.log(form);
     };
     return (
@@ -27,13 +27,13 @@ const Login = () => {
                         <div className="flex justify-center items-center mb-4  bg-[#343F71] rounded-xl">
                             <i className="fa-regular fa-envelope text-lg m-2"></i>
                             <input
-                                className=" bg-transparent px-3 w-[250px] h-11 rounded-lg"
+                                className="appearance-none bg-transparent px-3 w-[250px] h-11 rounded-lg "
                                 onChange={onValueChange}
                                 value={email}
                                 name="email"
                                 id="email"
                                 type="email"
-                                placeholder="name@email.com"
+                                placeholder="name@email.com"    
                             />
                         </div>
                         <div className="flex justify-center items-center bg-[#343F71] rounded-xl">

@@ -4,12 +4,18 @@ import "./index.css";
 import App from "./App";
 import AuthContext from "./context/AuthContext/AuthContext";
 import LocalContext from "./context/LocalContext/LocalContext";
+import UserContext from "./context/UserContext/UserContext";
+import ProductContext from "./context/ProductContext/ProductContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <AuthContext>
         <LocalContext>
-            <App />
+            <UserContext>
+                <ProductContext>
+                    <App />
+                </ProductContext>
+            </UserContext>
         </LocalContext>
     </AuthContext>
 );

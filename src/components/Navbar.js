@@ -38,6 +38,12 @@ const Navbar = () => {
                             >
                                 Cart
                             </Link>
+                            <Link
+                                className="ml-6 text-lg font-medium hover:scale-105"
+                                to="/admin/add-product"
+                            >
+                                Add Product
+                            </Link>
                         </>
                     )}
                 </div>
